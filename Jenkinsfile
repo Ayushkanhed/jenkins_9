@@ -3,22 +3,28 @@ pipeline {
 agent any
 
 stages {
+  
 
-stage('Build') {
+  stage('Build') {
 
-steps {
+    steps {
+      
+  
 
-echo "HelloWorld"
+      bat 'javac HelloWorld.java'
+        bat 'java -version'
 
 }
 
 }
 
 stage('Run') {
+  
 
-steps {
+  steps {
+  
 
-echo "HelloWorld"
+    bat 'java Helloworld'
 }
 }
 }
